@@ -62,5 +62,17 @@ function findSolution(target){
   return find(1,"1");
 }
 ````
+Same function with loop :
+````javascript
+function findSolution(n){
+  var m = [null,"1"];
+  for(let i=2; i<=n; i++){
+    if(i-5 >= 0 && m[i-5]) m[i] = `(${m[i-5]}+5)`;
+    else if(i%3 == 0 && m[i/3]) m[i] = `(${m[i/3]}*3)`;
+    else m[i] = null;
+  }
+  return m[n];
+}
+````
 # Exercise
 https://www.hackerrank.com/challenges/game-of-stones-1/problem
