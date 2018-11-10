@@ -1,20 +1,15 @@
 Recursive Fibonacci :
-````
-Time complexity : O(2^n)
-Space complexity : O(n)
-````
 ````javascript
 function fib(n){
   if(n < 2) return n;
   return fib(n-1) + fib(n-2);
 }
 ````
-
-Memoize Fibonacci :
 ````
-Time complexity : O(n)
+Time complexity : O(2^n)
 Space complexity : O(n)
 ````
+Memoize Fibonacci :
 ````javascript
 function fib(n){
   var m = [0,1];
@@ -23,11 +18,11 @@ function fib(n){
   return m[n];
 }
 ````
-Loop Fibonacci :
 ````
 Time complexity : O(n)
-Space complexity : O(1)
+Space complexity : O(n)
 ````
+Loop Fibonacci :
 ````javascript
 function fib(n){
   var a = 0, b = 1;
@@ -38,4 +33,8 @@ function fib(n){
   }
   return b;
 }
+````
+````
+Time complexity : O(n)
+Space complexity : O(1)
 ````
