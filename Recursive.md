@@ -2,7 +2,7 @@
 Most of the time, it's not a good idea to use recursion.
 In fact, previous results are not stored so we need to compute multiple times the same function.
 
-Recursive Fibonacci :
+**Recursive Fibonacci :**
 ````javascript
 function fib(n){
   if(n < 2) return n;
@@ -15,7 +15,8 @@ Space complexity : O(n)
 ````
 # Alternatives
 Hopefully, there are some alternatives :
-Memoize Fibonacci :
+
+**Memoize Fibonacci :**
 ````javascript
 function fib(n){
   var m = [0,1];
@@ -28,7 +29,7 @@ function fib(n){
 Time complexity : O(n)
 Space complexity : O(n)
 ````
-Loop Fibonacci :
+**Loop Fibonacci :**
 ````javascript
 function fib(n){
   var a = 0, b = 1;
