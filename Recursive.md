@@ -64,14 +64,14 @@ function findSolution(target){
 ````
 Same function with loop :
 ````javascript
-function findSolution(n){
-  var m = [null,"1"];
-  for(let i=2; i<=n; i++){
-    if(i-5 >= 0 && m[i-5]) m[i] = `(${m[i-5]}+5)`;
-    else if(i%3 == 0 && m[i/3]) m[i] = `(${m[i/3]}*3)`;
-    else m[i] = null;
+function findSolution(target){
+  var history = [null,"1"];
+  for(let i=2; i<=target; i++){
+    if(i-5 >= 0 && history[i-5]) history[i] = `(${history[i-5]}+5)`;
+    else if(i%3 == 0 && history[i/3]) history[i] = `(${history[i/3]}*3)`;
+    else history[i] = null;
   }
-  return m[n];
+  return history[target];
 }
 ````
 # Exercise
