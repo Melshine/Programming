@@ -45,6 +45,20 @@ function fib(n){
 Time complexity : O(n)
 Space complexity : O(1)
 ````
+# A good example
+Some problems are easier to solve with recursion than with loops. Most often these are problems that require exploring or processing several “branches”, each of which might branch out again into even more branches.
 
+*Consider this puzzle: by starting from the number 1 and repeatedly either adding 5 or multiplying by 3, find a sequence of such additions and multiplications to reach a number "target" ?*
+````javascript
+function findSolution(target){
+  function find(current, history){
+    if(current == target) return history;
+    if(current > target) return null;
+    return find(current+5, `(${history}+5)`) || 
+           find(current*3, `(${history}*3)`)
+    }
+  return find(1,"1");
+}
+````
 # Exercise
 https://www.hackerrank.com/challenges/game-of-stones-1/problem
