@@ -38,3 +38,6 @@ function fib(n){
 Time complexity : O(n)
 Space complexity : O(1)
 ````
+
+# Exercise
+https://www.hackerrank.com/challenges/game-of-stones-1/problem
