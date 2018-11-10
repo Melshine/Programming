@@ -2,6 +2,8 @@
 Most of the time, it's not a good idea to use recursion.
 In fact, previous results are not stored so we need to compute multiple times the same function.
 
+Consider the following function, here ``fib(n-1)`` is called twice.
+
 **Recursive Fibonacci :**
 ````javascript
 function fib(n){
