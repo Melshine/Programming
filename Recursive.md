@@ -62,7 +62,7 @@ function findSolution(target){
   return find(1,"1");
 }
 ````
-Same function with loop :
+Same function with loop (faster) :
 ````javascript
 function findSolution(target){
   var history = [null,"1"];
