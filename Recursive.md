@@ -1,3 +1,7 @@
+# How to efficiently implement a recursive function ?
+Most of the time, it's not a good idea to use recursion.
+In fact, previous results are not stored so we need to compute multiple times the same function.
+
 Recursive Fibonacci :
 ````javascript
 function fib(n){
@@ -9,6 +13,8 @@ function fib(n){
 Time complexity : O(2^n)
 Space complexity : O(n)
 ````
+# Alternatives
+Hopefully, there are some alternatives :
 Memoize Fibonacci :
 ````javascript
 function fib(n){
