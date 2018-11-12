@@ -1,8 +1,10 @@
 # How to efficiently implement a recursive function ?
-Most of the time, it's not a good idea to use recursion.
+Most of the time, we have to take care when dealing with recursion.
 In fact, previous results are not stored so we need to compute multiple times the same function.
 
-Consider the following function, here ``fib(n-1)`` is called twice.
+Consider the following function that computes fibonacci number at the nth step.
+
+Here ``fib(n-1)`` is called one, ``fib(n-2)`` twice, ``fib(n-3)`` three times, etc.
 
 **Recursive Fibonacci :**
 ````javascript
@@ -26,7 +28,7 @@ function fib(n, memo = []){
 }
 ````
 # Alternatives
-Hopefully, there are some alternatives :
+You can realize the same function using loop only :
 
 **Memoize Fibonacci :**
 ````javascript
@@ -41,7 +43,7 @@ function fib(n){
 Time complexity : O(n)
 Space complexity : O(n)
 ````
-**Loop Fibonacci :**
+**Temp Fibonacci :**
 ````javascript
 function fib(n){
   var a = 0, b = 1;
