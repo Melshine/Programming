@@ -15,6 +15,16 @@ function fib(n){
 Time complexity : O(2^n)
 Space complexity : O(n)
 ````
+You can proceed as follow to cope with this problem :
+````javascript
+function fib(n, memo = []){
+  if(n < 2) return n;
+  if(memo[n] == undefined){
+    memo[n] = fib(n-1, memo) + fib(n-2, memo);
+  }
+  return memo[n];
+}
+````
 # Alternatives
 Hopefully, there are some alternatives :
 
